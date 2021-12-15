@@ -34,7 +34,7 @@ daysOfWeek = [
 	['', '', '', '', '', '', '']	#SK, Slovak
 ]
 
-#https://en.wiktionary.org/wiki/Appendix:Days_of_the_week
+#https://en.wiktionary.org/wiki/Appendix:Days_of_the_week 
 
 daysMonthNormalYear = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
