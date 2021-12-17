@@ -92,10 +92,10 @@ def makeDeepConnections(removedCity, passedCityMatrix):
 			if index != removedCityIndex:
 				for index2, connection in enumerate(copyCityMatrix[index][1:]):		#index2 will iterate thru connections
 					if connection == 1:
-						for index3, endConnection in enumerate(copyCityMatrix[index2][1:]):
+						for index3, endConnection in enumerate(copyCityMatrix[index2][1 + index:]):
 							if endConnection == 1:
-								if copyCityMatrix[index][index3 + 1] == 0:				#if A is connected to B, we give B's connections to A too
-									copyCityMatrix[index][index3 + 1] = 1
+								if copyCityMatrix[index][index3 + 1 + index] == 0:				#if A is connected to B, we give B's connections to A too
+									copyCityMatrix[index][index3 + 1 + index] = 1
 		if lastCityMatrix == copyCityMatrix:
 			break
 		#print 'go agane'
@@ -109,6 +109,25 @@ def makeDeepConnections(removedCity, passedCityMatrix):
 #makeDeepConnections('Atoka', myTest) 
 #print 'second connections'
 #print myTest
+
+
+def CheckForConnectionButSmartNow(superIndex):
+	#	removedCityIndex = simpleCityList.index(removedCity) to find removed city index
+	#if superIndex == removedCityIndex:
+	#	myGraphSolution[superIndex] = 5
+	#else:
+	#	myGraphSolution[superIndex] = 1
+	myGraphSolution[superIndex] = 1
+	for index2, connection in enumerate(initialCityMatrix[superIndex][1:]):		#index2 will iterate thru connections
+		if connection == 1 and myGraphSolution[index2] == 0:
+			#outputFile.write(passedCityMatrix[superIndex][0] + ' is connected to ' + passedCityMatrix[index2][0] + '\n')
+			#outputFile.write(str(myGraphSolution) + '\n')
+			#if myGraphSolution[index2] == 0:
+			CheckForConnectionButSmartNow(index2)
+	#outputFile.write('quitting recursion for' +  passedCityMatrix[superIndex][0])
+
+
+
 offset = 1
 for i in range(totalCases): #do I even want this loop? dunno!
 	#print 'uwu ' + lines[i + offset]
@@ -123,19 +142,53 @@ for i in range(totalCases): #do I even want this loop? dunno!
 	offset += trips
 	
 	criticalCities = []
-	for cityToRemove in simpleCityList:
-		copyCityMatrix = copy.deepcopy(initialCityMatrix)
-		removeCity(cityToRemove, copyCityMatrix)
-		copyCityMatrix = makeDeepConnections(cityToRemove, copyCityMatrix)
-		for cityList in copyCityMatrix:
-			if 0 in cityList:							#detect that the removed city was critical
+
+	for index5,cityToRemove in enumerate(simpleCityList):
+		#print 'we are removing cities'
+		#copyCityMatrix = copy.deepcopy(initialCityMatrix)
+		#removeCity(cityToRemove, copyCityMatrix)
+		#savedCityList = copy.copy(initialCityMatrix[index5])
+		#for index10,element in enumerate(initialCityMatrix[index5][1:])
+		#	initialCityMatrix[index5][1 + index10] = 
+		
+		
+		#print 'we are making deep connections'
+		#copyCityMatrix = makeDeepConnections(cityToRemove, copyCityMatrix)
+		#print 'we are detecting that they are ok or not after making deep connections'
+		myGraphSolution = []
+		for unit in simpleCityList:
+			myGraphSolution.append(0)
+		#outputFile.write('I just removed ' + cityToRemove +  str(copyCityMatrix) + '\n')
+		if index5 == 0:
+			myGraphSolution[0] = 1
+			CheckForConnectionButSmartNow(1)
+		else:
+			myGraphSolution[index5] = 1
+			CheckForConnectionButSmartNow(0)
+		#CheckForConnectionButSmartNow(startSuperIndex) #THIS TOOK SO LONG TO GET RIGHT I AM CRYING BLOOD
+		if 0 in myGraphSolution:
+			criticalCities.append(cityToRemove)
+		print 'i have done a city'
+		print index5
+
+
+		#print cityToRemove
+		#print myGraphSolution
+		
+		#for cityList in copyCityMatrix:
+		#	if 0 in cityList:							#detect that the removed city was critical
 				#print cityToRemove
 				#print copyCityMatrix
 				#print cityList
-				criticalCities.append(cityToRemove)
-				break
+		#		criticalCities.append(cityToRemove)
+		#		break
+
+
+
+
 
 	outputFile.write('Case #' + str(i + 1) + ': ')
+
 
 	#print criticalCities
 	if criticalCities:
@@ -153,3 +206,9 @@ for i in range(totalCases): #do I even want this loop? dunno!
 	
 	if (i != totalCases - 1):
 		outputFile.write('\n')
+
+
+
+
+
+
