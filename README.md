@@ -88,4 +88,6 @@ These are some of the key concepts that I needed, used or learned to solve each 
 * Sorting the contentes of a pcap file by sequence number
 * Finding hexadecimal PNG data and writing the appropriate bytes to a PNG file
 
+---
+
 If you look at my code please note that for the most part, I had no idea what I was doing and a lot of it will be ugly and full of commented-out stuff. It may be hard to read, but time constraints and the fact that I was using a new language didn't let me get too fancy. In any case, thanks for reading!
