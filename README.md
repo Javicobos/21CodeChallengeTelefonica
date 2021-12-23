@@ -36,53 +36,53 @@ A lot of the problems were really challenging and included concepts I knew nothi
 
 These are some of the key concepts that I needed, used or learned to solve each of the challenges. You can find more information about them on their respective pages.
 
-Challenge 1 - Roll the dice!
+[Challenge 1 - Roll the dice!](/01%20RollDice)
 * Reading from an input file using open() and .readlines()
 * Writing output to an output file using .write()
 * Basic usage of loops, conditionals, variables and data types
 * Using range() and enumerate()
 
-Challenge 2 - Catch them all
+[Challenge 2 - Catch them all](/02%20CatchEmAll)
 * Basic string manipulation (combine, replace characters, reverse, search)
 * Basic list manipulation (append, pop)
 * String searching
 
-Challenge 3 - The night of the hunter
+[Challenge 3 - The night of the hunter](03%20NightHunter)
 * Data parsing in three different formats (using partition and split)
 * Comparing fractions without using floats
 * Using map(), filter() and zip()
 * Using dictionaries and the dict() function
 * Using def to make functions
 
-Challenge 4 - Let’s build musical scales
+[Challenge 4 - Let’s build musical scales](/04%20MusicScales)
 * Careful data manipulation and list iteration (e.g. using [1:] or [::2])
 * Filling up a list with elements from another with very specific conditions
 
-Challenge 5 - Invictus
+[Challenge 5 - Invictus](/05%20Invictus)
 * Basic CTF
 * Scanning a file and detecting non-ascii characters
 * Using a target string to decode the pattern looking for differences between its characters
 
-Challenge 6 - What day is it?
+[Challenge 6 - What day is it?](/06%20Day)
 * Looking up the days of the week in 20 languages with special characters (why)
 * Making sure said days had the correct characters (this was painful and took a lot of trial and error and copying and pasting)
 * Calculating dates correctly for normal and leap years
 
-Challenge 7 - Escape or Die
+[Challenge 7 - Escape or Die](/07%20Escape)
 * Working with a subprocess, reading its input and outputting commands to it
 * Using netcat to connect to a host
 * Transversing a maze and listing all possible solutions (paths to an exit) to get the shortest one
 
-Challenge 8 - Awesome Sales Inc.!
+[Challenge 8 - Awesome Sales Inc.!](/08%20CityBuses)
 * Checking if a graph is connected or not
 * Complexity (or why having six nested loops working with giant matrices andd being extremely redundant is not a good idea)
 * Using DFS (depth first search) and recursive backtracking 
 
-Challenge 9 - Collisions
+[Challenge 9 - Collisions](/09%20Collisions)
 * Detecting if two (large) sprites in an (even larger) map collide
 * Calculating all collisions between sprites in a somewhat reasonable time
 
-Challenge 10 - Packets delivery
+[Challenge 10 - Packets delivery](/10%20Packets)
 * Using tcpdump to read the contents of a pcap file
 * Sorting the contentes of a pcap file by sequence number
 * Finding hexadecimal PNG data and writing the appropriate bytes to a PNG file
