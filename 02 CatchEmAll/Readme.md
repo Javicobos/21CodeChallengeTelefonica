@@ -227,4 +227,4 @@ All the Pokémon have been caught.
 
 ## My notes: 
 
-Python built-in string methods were a blessing for this one, since the bulk of the job was to try to find strings in the given map, looping until all of the given Pókemon were found. The given Pókemeon were always found and each of them appeared exactly once, so we didn't have to handle edge cases with missing or duplicates mons. 
+Python built-in string methods were a blessing for this one, since the bulk of the job was to try to find strings in the given map, looping until all of the given Pókemon were found. The given Pókemeon were always found and each of them appeared exactly once, so we didn't have to handle edge cases with missing or duplicate mons. 
