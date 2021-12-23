@@ -46,4 +46,4 @@ Case #3: ABC#DEF#GA
 </pre>
 
 ## My notes: 
-I thought this problem would be very difficult, but it ended up taking a lot less effort than challenge 3. Using a matrix with all of the possible ways to represent each note was quite helpful, as it meant I'd look at each list inside and choose the first way to represent a given tone whose letter wasn't used yet. Looking at the rankings, this was the problem most people got wrong so I guess it was easy to mess up. 
+I thought this problem would be very difficult, but it ended up taking a lot less effort than challenge 3. Using a matrix with all of the possible ways to represent each note was quite helpful, as it meant I'd look at each list inside and choose the first way to represent a given tone whose letter wasn't used yet. Looking at the rankings, a lot of people got this challenge wrong so I guess it was easy to mess up.
