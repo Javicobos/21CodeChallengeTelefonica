@@ -113,3 +113,7 @@ Case #3: Lyon,Niza,Toulouse
 This challenge took a lot of effort, and my original solution was... really bad. It worked, but it was extremely inefficient because I basically made a full list for each point, saving all other points it could visit, and repeated a process several times until no new connections could be found. It worked for the test cases with reasonably-sized list of cities, but not for the one thousand or two thousand trips in the submission case. In my defense, people don't usually plan trips with seven hundred cities in them. 
 
 The "good" solution had some steps: first making a list of all cities and their connections, then removing a city and checking if the graph was still connected. To do that, it would start from the first city and go to each new city it could find, writing their indexes. If it got done and they were all visited, the graph was connected. If there was any zero along the way, then it wasn't. The it'd make a list with these critical cities that can't be removed and print it. 
+
+When the whole thing worked, I was very happy about it.
+
+<img src="https://user-images.githubusercontent.com/27980285/147273152-c30c432c-185c-4146-b9eb-b71110b842a8.png" width="436" height="22">
