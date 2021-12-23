@@ -53,6 +53,7 @@ These are some of the key concepts that I needed, used or learned to solve each 
 * Using map(), filter() and zip()
 * Using dictionaries and the dict() function
 * Using def to make functions
+* Importing a module
 
 [Challenge 4 - Let’s build musical scales](/04%20MusicScales)
 * Careful data manipulation and list iteration (e.g. using [1:] or [::2])
